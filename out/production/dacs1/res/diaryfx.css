@@ -1,0 +1,233 @@
+.root {
+    -fx-background-color: linear-gradient(to right, #e0e7ff, #c7d2fe, #a5b4fc);
+}
+
+.root.dark-theme {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #232236, #45475a);
+}
+
+.menu-bar {
+    -fx-background-color: #ede9fe;
+}
+
+.menu-btn {
+    -fx-background-color: transparent;
+    -fx-padding: 0 32 0 32;
+    -fx-font-size: 17px;
+    -fx-font-family: 'Arial';
+    -fx-font-weight: bold;
+    -fx-text-fill: #232136;
+}
+
+.menu-btn:hover {
+    -fx-text-fill: #232136;
+}
+
+.header-label {
+    -fx-font-size: 34px;
+    -fx-font-family: 'Arial';
+    -fx-font-weight: bold;
+    -fx-text-fill: #232136;
+    -fx-padding: 28 0 18 40;
+}
+
+.diary-card {
+    -fx-background-color: #e5e7eb;
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(gaussian, #a5b4fc44, 7, 0.12, 0, 2);
+    -fx-padding: 22 28 22 28;
+    -fx-max-width: 700;
+    -fx-min-width: 400;
+}
+
+.diary-card.dark-theme {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 100%, #45475a, #232136);
+    -fx-effect: dropshadow(gaussian, #6d28d988, 9, 0.18, 0, 2);
+}
+
+.diary-title {
+    -fx-text-fill: #000000;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.diary-title.dark-theme {
+    -fx-text-fill: #f3f4f6;
+}
+
+.diary-date {
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+}
+
+.diary-date.dark-theme {
+    -fx-text-fill: #d1d5db;
+}
+
+.diary-content {
+    -fx-text-fill: #333333;
+    -fx-font-size: 15px;
+}
+
+.diary-content.dark-theme {
+    -fx-text-fill: #d1d5db;
+}
+
+.fab {
+    -fx-background-color: #6d28d9;
+    -fx-background-radius: 50%;
+    -fx-font-size: 32px;
+    -fx-font-family: 'Arial';
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-min-width: 64px;
+    -fx-min-height: 64px;
+    -fx-max-width: 64px;
+    -fx-max-height: 64px;
+    -fx-effect: dropshadow(gaussian, #a5b4fc88, 12, 0.3, 0, 2);
+}
+
+.button {
+    -fx-background-color: #4f46e5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-background-radius: 8;
+}
+
+.button:hover {
+    -fx-background-color: #4338ca;
+}
+
+.button:pressed {
+    -fx-background-color: #3730a3;
+}
+
+.text-field, .text-area {
+    -fx-background-color: #f3f4f6;
+    -fx-text-fill: #1f2937;
+    -fx-font-size: 14px;
+    -fx-padding: 8 12;
+    -fx-background-radius: 8;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, #4f46e5, 4, 0, 0, 0);
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #4f46e5;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #4338ca;
+}
+
+.label, .diary-title, .header-label, .menu-btn, .setting-label, .friend-label, .info-label, .section-title, .tab-label {
+    -fx-text-fill: #1a1a1a; 
+    color: #1a1a1a;
+}
+.diary-content, .diary-date {
+    -fx-text-fill: #333333; /* Dark grey for content and date in light theme */
+    color: #333333;
+}
+.button, .menu-btn, .setting-btn, .lang-btn {
+    -fx-text-fill: #1a1a1a; /* Very dark grey for button text in light theme */
+    color: #1a1a1a;
+}
+/* Đậm hơn cho tiêu đề */
+.header-label, .section-title {
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #000000; /* Black for bold titles in light theme */
+    color: #000000;
+}
+/* Chữ phụ, mô tả nhỏ */
+.info-label, .friend-label, .setting-label {
+    -fx-text-fill: #232136; /* Slightly lighter dark grey for info text in light theme */
+    color: #444444;
+}
+/* Nếu có nền tối thì override lại ở dark mode */
+.root.dark-theme .label, .root.dark-theme .diary-title, .root.dark-theme .header-label, .root.dark-theme .menu-btn, .root.dark-theme .setting-label, .root.dark-theme .friend-label, .root.dark-theme .info-label, .root.dark-theme .section-title, .root.dark-theme .tab-label {
+    -fx-text-fill: #f3f4f6;
+    color: #f3f4f6;
+}
+.root.dark-theme .diary-content, .root.dark-theme .diary-date {
+    -fx-text-fill: #d1d5db;
+    color: #d1d5db;
+}
+.root.dark-theme .button, .root.dark-theme .menu-btn, .root.dark-theme .setting-btn, .root.dark-theme .lang-btn {
+    -fx-text-fill: #f3f4f6;
+    color: #f3f4f6;
+}
+.root.dark-theme .header-label, .root.dark-theme .section-title {
+    -fx-text-fill: #f3f4f6;
+    color: #f3f4f6;
+}
+.root.dark-theme .info-label, .root.dark-theme .friend-label, .root.dark-theme .setting-label {
+    -fx-text-fill: #d1d5db;
+    color: #d1d5db;
+}
+
+/* Styles for AdminView */
+.user-card {
+    -fx-background-color: #e0e7ff; /* Light theme background */
+    -fx-background-radius: 14;
+    -fx-effect: dropshadow(gaussian, #a5b4fc44, 4, 0.1, 0, 1);
+    -fx-text-fill: #232136; /* Dark text for light theme */
+}
+
+.user-card.dark-theme {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 100%, #45475a, #232136); /* Dark theme background */
+    -fx-effect: dropshadow(gaussian, #6d28d988, 4, 0.1, 0, 1);
+     -fx-text-fill: #f3f4f6; /* Light text for dark theme */
+}
+
+.selected-menu-btn {
+     -fx-background-color: #c7d2fe; /* Light background when selected */
+     -fx-text-fill: #6d28d9; /* Dark purple text when selected in light theme */
+     -fx-border-color: radial-gradient(center 50% 50%, radius 100%, #232136, #000000);
+     -fx-border-width: 0 0 2 0;
+}
+
+.selected-menu-btn.dark-theme {
+     -fx-background-color: #6d28d9; /* Dark purple background when selected in dark theme */
+     -fx-text-fill: #c7d2fe; /* Light text when selected in dark theme */
+     -fx-border-color: radial-gradient(center 50% 50%, radius 100%, #e5e7eb, #ffffff);
+     -fx-border-width: 0 0 2 0;
+}
+
+.delete-button {
+     -fx-background-color: #fca5a5; /* Red background */
+     -fx-text-fill: #444; /* Dark text for light theme */
+     -fx-background-radius: 8;
+}
+
+.delete-button:hover {
+     -fx-background-color: #f87171; /* Lighter red on hover */
+     -fx-text-fill: white; /* White text on hover */
+}
+
+.delete-button.dark-theme {
+     -fx-background-color: #ef4444; /* Darker red in dark theme */
+     -fx-text-fill: white; /* White text in dark theme */
+}
+
+.delete-button.dark-theme:hover {
+    -fx-background-color: #f87171; /* Lighter red on hover in dark theme */
+    -fx-text-fill: white; /* White text on hover in dark theme */
+}
